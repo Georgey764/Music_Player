@@ -1,0 +1,29 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 90px;
+  grid-template-columns: min(40%, 450px) 1fr;
+}
+
+#side_tab {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+#main_tab {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+#audio_player_tab {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+}
