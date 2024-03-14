@@ -1,0 +1,9 @@
+.like:hover {
+  color: white;
+  transition: color 0.4s;
+}
+
+.like {
+  color: gray;
+  font-size: 2rem;
+}

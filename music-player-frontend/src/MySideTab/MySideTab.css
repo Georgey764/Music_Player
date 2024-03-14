@@ -29,3 +29,7 @@
 }
 
 /*This is CSS Code for Library*/
+
+.search_bar::placeholder {
+  color: #94949c;
+}

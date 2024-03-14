@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1eedddea-90a2-4f40-9fb4-f132706faf94" name="Changes" comment="" />
+    <list default="true" id="1eedddea-90a2-4f40-9fb4-f132706faf94" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/Music_Player.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/artifacts/Music_Player_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/artifacts/george_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/george/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/BackEnd.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BackEnd.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../music-player-frontend/src/MainTab/MainTab.css" beforeDir="false" afterPath="$PROJECT_DIR$/../music-player-frontend/src/MainTab/MainTab.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../music-player-frontend/src/MainTab/MainTab.js" beforeDir="false" afterPath="$PROJECT_DIR$/../music-player-frontend/src/MainTab/MainTab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../music-player-frontend/src/MusicPlayer/MusicPlayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../music-player-frontend/src/MusicPlayer/MusicPlayer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../music-player-frontend/src/MySideTab/MySideTab.css" beforeDir="false" afterPath="$PROJECT_DIR$/../music-player-frontend/src/MySideTab/MySideTab.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../music-player-frontend/src/MySideTab/MySideTab.js" beforeDir="false" afterPath="$PROJECT_DIR$/../music-player-frontend/src/MySideTab/MySideTab.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,9 +35,12 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2d8sLznedtV2GMAz62aqTmZ8aah" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -26,7 +51,11 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/george/Documents/GitHub/Music_Player/BackEnd"
+    "last_opened_file_path": "/Users/george/Documents/GitHub/Music_Player/BackEnd",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.editor"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -39,5 +68,9 @@
       <updated>1709400989078</updated>
     </task>
     <servers />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

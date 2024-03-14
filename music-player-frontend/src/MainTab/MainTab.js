@@ -1,9 +1,10 @@
 import { ThemeProvider } from "@emotion/react";
-import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
-import { Fab, createTheme } from "@mui/material";
+import { ArrowBackIos, ArrowForwardIos, Search } from "@mui/icons-material";
+import { Fab, createTheme, Button } from "@mui/material";
 
 import "./MainTab.css";
 import { useState } from "react";
+import Music from "./../MusicComp/Music.js";
 
 const theme = createTheme({
   palette: {
@@ -69,25 +70,72 @@ function SearchHeader() {
       <Fab style={{ marginLeft: "0.5rem" }} size="small" color="primary">
         <ArrowForwardIos style={{ paddingLeft: "0.5px", color: "lightgray" }} />
       </Fab>
-      <input
-        value={query}
-        onChange={(e) => {
-          handleQueryChange(e);
-        }}
-        type="text"
-        id="search_bar"
-        placeholder="Search for Artists"
+      <div
         style={{
-          padding: "1.2rem 1.5rem 1.2rem 1.5rem",
-          color: "lightgray",
-          fontSize: "1rem",
-          marginLeft: "0.5rem",
-          width: "300px",
-          borderRadius: "2rem",
-          background: "#4B4C4C",
-          border: "none",
+          margin: "0",
+          padding: "0",
+          position: "relative",
+          display: "inline-block",
+          width: "min(300px, 25%)",
         }}
-      />
+      >
+        <Search
+          color="primary"
+          style={{
+            position: " absolute",
+            top: "50%",
+            left: "7%",
+            transform: "translateY(-50%)",
+            width: "20px",
+            color: "lightgray",
+            fontSize: "5rem",
+          }}
+        />
+        <input
+          value={query}
+          onChange={(e) => {
+            handleQueryChange(e);
+          }}
+          type="text"
+          id="search_bar"
+          placeholder="Search for Music"
+          style={{
+            padding: "0.6rem 0.6rem 0.6rem 2.2rem",
+            color: "lightgray",
+            fontSize: "1rem",
+            marginLeft: "0.5rem",
+            width: "100%",
+            borderRadius: "2rem",
+            background: "#4B4C4C",
+            border: "none",
+          }}
+        />
+      </div>
+      <p
+        className="sign_up"
+        style={{
+          position: "fixed",
+          display: "inline-block",
+          left: "calc(100% - 230px)",
+          fontSize: "1rem",
+          margin: "0.8rem 0",
+        }}
+      >
+        Sign Up
+      </p>
+      <Button
+        variant="contained"
+        style={{
+          position: "fixed",
+          display: "inline-block",
+          left: "calc(100% - 150px)",
+        }}
+        color="success"
+        size="medium"
+        sx={{ borderRadius: "1.5rem", padding: "0.4rem 1.6rem" }}
+      >
+        Log In
+      </Button>
     </div>
   );
 }
@@ -109,62 +157,62 @@ function SearchBody({ dataObj }) {
   );
 }
 
-function Music({ dataObj }) {
-  const { setCurrentSong } = dataObj;
+// function Music({ dataObj }) {
+//   const { setCurrentSong } = dataObj;
 
-  function handleClick(e) {
-    if (
-      Number(e.target.closest(".music_result").getAttribute("data-id")) ===
-      dataObj.currentSong
-    ) {
-      dataObj.audio.play();
-      dataObj.setActive((cur) => true);
-    } else {
-      dataObj.setActive((cur) => true);
-      setCurrentSong((cur) => dataObj.id);
-    }
-  }
+//   function handleClick(e) {
+//     if (
+//       Number(e.target.closest(".music_result").getAttribute("data-id")) ===
+//       dataObj.currentSong
+//     ) {
+//       dataObj.audio.play();
+//       dataObj.setActive((cur) => true);
+//     } else {
+//       dataObj.setActive((cur) => true);
+//       setCurrentSong((cur) => dataObj.id);
+//     }
+//   }
 
-  return (
-    <div
-      onClick={handleClick}
-      className="music_result"
-      data-id={dataObj.id}
-      style={{ fontWeight: "500", display: "block", borderRadius: "0.3rem" }}
-    >
-      <img
-        style={{
-          margin: "0",
-          marginLeft: "0.1rem",
-          display: "inline-block",
-          objectFit: "cover",
-          width: "50px",
-          height: "50px",
-          borderRadius: "0.3rem",
-          verticalAlign: "middle",
-        }}
-        src={dataObj.image}
-        alt="Current song album cover"
-      />
-      <span
-        style={{
-          display: "inline-block",
-          paddingLeft: "1.5rem",
-          verticalAlign: "middle",
-        }}
-      >
-        <p style={{ color: "white", margin: "0" }}>{dataObj.songName}</p>
-        <p
-          style={{
-            color: "lightgrey",
-            fontSize: "0.8rem",
-            margin: "0",
-            marginTop: "0.2rem",
-          }}
-        >
-          {dataObj.name}
-        </p>
-      </span>
-    </div>
-  );
-}
+//   return (
+//     <div
+//       onClick={handleClick}
+//       className="music_result"
+//       data-id={dataObj.id}
+//       style={{ fontWeight: "500", display: "block", borderRadius: "0.3rem" }}
+//     >
+//       <img
+//         style={{
+//           margin: "0",
+//           marginLeft: "0.1rem",
+//           display: "inline-block",
+//           objectFit: "cover",
+//           width: "50px",
+//           height: "50px",
+//           borderRadius: "0.3rem",
+//           verticalAlign: "middle",
+//         }}
+//         src={dataObj.image}
+//         alt="Current song album cover"
+//       />
+//       <span
+//         style={{
+//           display: "inline-block",
+//           paddingLeft: "1.5rem",
+//           verticalAlign: "middle",
+//         }}
+//       >
+//         <p style={{ color: "white", margin: "0" }}>{dataObj.songName}</p>
+//         <p
+//           style={{
+//             color: "lightgrey",
+//             fontSize: "0.8rem",
+//             margin: "0",
+//             marginTop: "0.2rem",
+//           }}
+//         >
+//           {dataObj.name}
+//         </p>
+//       </span>
+//     </div>
+//   );
+// }

@@ -80,13 +80,18 @@ function CurrentSongDivision({ dataObj }) {
 
 function CenterDivision({ dataObj }) {
   const [currentTime, setCurrentTime] = useState(0);
-  const { audio, currentSong, data, active } = dataObj;
-  let duration = audio?.duration;
+  const { audio, currentSong, active, setActive } = dataObj;
 
   useEffect(() => {
     let increaseCurrentTime;
     if (active) {
       increaseCurrentTime = setInterval(function () {
+        if (currentTime === Math.round(audio?.duration)) {
+          setCurrentTime((cur) => 0);
+          dataObj.setCurrentSong("");
+          setActive((cur) => !cur);
+          clearInterval(increaseCurrentTime);
+        }
         setCurrentTime((cur) => {
           return cur + 1;
         });
@@ -96,7 +101,15 @@ function CenterDivision({ dataObj }) {
     return () => {
       clearInterval(increaseCurrentTime);
     };
-  }, [active, setCurrentTime, currentSong, dataObj.data.id]);
+  }, [
+    active,
+    setCurrentTime,
+    currentSong,
+    dataObj.data.id,
+    audio?.duration,
+    setActive,
+    currentTime,
+  ]);
 
   useEffect(() => {
     setCurrentTime((cur) => 0);
@@ -117,12 +130,17 @@ function CenterDivision({ dataObj }) {
 
   return (
     <div className="center_division">
-      <div className="center_upper_division">
+      <div className="center_upper_division" style={{ marginBottom: "-5px" }}>
         <SkipPrevious
           style={{ fontSize: "2rem", paddingRight: "1rem" }}
           color="primary"
         />
-        <Fab onClick={(e) => handleClick(e)} color="primary" size="small">
+        <Fab
+          onClick={(e) => handleClick(e)}
+          color="primary"
+          size="small"
+          style={{ transform: "scale(0.9)" }}
+        >
           {dataObj.active ? <Pause /> : <PlayArrow />}
         </Fab>
         <SkipNext
@@ -137,7 +155,7 @@ function CenterDivision({ dataObj }) {
         value={currentTime ? currentTime : 0}
         min={0}
         step={1}
-        max={duration ? duration : 0}
+        max={audio?.duration ? Math.round(audio?.duration) : 0}
         valueLabelDisplay="auto"
         onChange={(e) => handleChange(e)}
         color="primary"
@@ -176,10 +194,9 @@ function VolumeDivision({ dataObj }) {
 
   useEffect(() => {
     dataObj.audio.volume = volume / 100;
-  }, []);
+  }, [dataObj.audio, volume]);
 
   function handleChange(e) {
-    dataObj.audio.volume = e.target.value / 100;
     setVolume(e.target.value);
   }
 

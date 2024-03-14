@@ -4,16 +4,21 @@
   opacity: 1;
 }
 
-.music_result {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  width: calc(100% - 5rem);
-  padding: 0.5rem;
+.sign_up {
+  color: gray;
+}
+
+.sign_up:hover {
+  color: lightgray;
+  transition: color 0.5s;
 }
 
 .music_result:hover {
   background-color: #4b4c4c;
   cursor: pointer;
+}
+
+.sign_up:hover {
+  cursor: pointer;
+  color: lightgray;
 }
