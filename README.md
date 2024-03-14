@@ -2,6 +2,8 @@
 
 A music player that lets its users upload and stream music. Currently only the static frontend has been completed. 
 
+<iframe width="963" height="471" src="https://www.youtube.com/embed/0OvJdQVySJk" title="Music Player Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 To check it out:
 1) Make sure you have npm installed
 2) You need to clone the repository then hit npm start in the console project directory once you are in the project directory
