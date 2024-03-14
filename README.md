@@ -2,6 +2,7 @@
 
 A music player that lets its users upload and stream music. Currently only the static frontend has been completed. 
 
+Click Here to view the demo video
 [<img src="https://img.youtube.com/vi/0OvJdQVySJk/0.jpg" style="width: 50%;">](https://www.youtube.com/watch?v=0OvJdQVySJk "Music Player Demo")
 
 To check it out:
