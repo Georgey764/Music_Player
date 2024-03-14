@@ -2,9 +2,7 @@
 
 A music player that lets its users upload and stream music. Currently only the static frontend has been completed. 
 
-[<img src="https://img.youtube.com/vi/0OvJdQVySJk/0.jpg" style="width: 300px; height: 337px; object-fit: fill;">](https://www.youtube.com/watch?v=0OvJdQVySJk "Music Player Demo")
-
-[![YT EMBED VIDEO](https://img.youtube.com/vi/0OvJdQVySJk/0.jpg)](https://www.youtube.com/watch?v=0OvJdQVySJk)
+[<img src="https://img.youtube.com/vi/0OvJdQVySJk/0.jpg" style="width: 300px; height: 337px; object-fit: cover;">](https://www.youtube.com/watch?v=0OvJdQVySJk "Music Player Demo")
 
 To check it out:
 1) Make sure you have npm installed
