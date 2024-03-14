@@ -1,4 +1,4 @@
-#Music Player (In-Progress)
+# Music Player (In-Progress)
 
 A music player that lets its users upload and stream music. Currently, only the static frontend has been completed. 
 
