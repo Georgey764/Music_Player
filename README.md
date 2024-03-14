@@ -1,6 +1,6 @@
 # Music Player (In-Progress)
 
-A music player that lets its users upload and stream music. Currently, only the static frontend has been completed. 
+A music player that lets its users upload and stream music. Currently only the static frontend has been completed. 
 
 To check it out:
 1) Make sure you have npm installed
